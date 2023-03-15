@@ -14,7 +14,8 @@ public class UsersRepository : IUserRepository
         return new List<User>
         {
             new User("Tomas", "Jiny", 1),
-            new User("Johnas", "Tomas", 25)
+            new User("Johnas", "Tomas", 25),
+            new WebUser("Poruseny", "Uzivatel", 20, "porusenyuzivatel@gmail.com")
         };
     }
 }
