@@ -2,10 +2,10 @@
 
 public class User
 {
-    private int Id { get; }
-    private int Age { get; set; }
-    private string FirstName { get; }
-    private string LastName { get; }
+    public int Id { get; }
+    public int Age { get; set; }
+    public string FirstName { get; }
+    public string LastName { get; }
 
     public User(string firstName, string lastName, int age)
     {
