@@ -12,11 +12,6 @@ public class WebUser : User
 
     public override void UpdateUsersAge(int age)
     {
-        if (age < 18)
-        {
-            throw new Exception("User should be older than 18");
-        }
-        
         base.UpdateUsersAge(age);
     }
 }
