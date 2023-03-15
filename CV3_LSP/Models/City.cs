@@ -2,7 +2,7 @@
 
 public class City
 {
-    private string Name { get; }
+    public string Name { get; }
     private int PSC { get; set; }
     
     public City(string name, int psc)

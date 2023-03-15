@@ -23,4 +23,6 @@ public class User
             ? age
             : throw new ArgumentException($"Provided age: {age} is less than zero");
     }
+
+    public Address GetAddress() => Address;
 }
