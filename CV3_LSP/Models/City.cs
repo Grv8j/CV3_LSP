@@ -1,8 +1,13 @@
 ﻿namespace CV3_LSP.Models;
 
-public class City
+public interface ICity
 {
-    public string Name { get; }
+    string GetCityName();
+}
+
+public class City : ICity
+{
+    private string Name { get; }
     private int PSC { get; set; }
     
     public City(string name, int psc)
@@ -10,4 +15,6 @@ public class City
         Name = name;
         PSC = psc;
     }
+
+    public string GetCityName() => Name;
 }

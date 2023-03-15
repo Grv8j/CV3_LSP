@@ -1,14 +1,20 @@
 ﻿namespace CV3_LSP.Models;
 
-public class User
+public interface IUser
+{
+    void UpdateUsersAge(int age);
+    string GetUserCityName();
+}
+
+public class User : IUser
 {
     public int Id { get; }
     public int Age { get; set; }
     public string FirstName { get; }
     public string LastName { get; }
-    public Address Address { get; }
+    private IAddress Address { get; }
 
-    public User(string firstName, string lastName, int age, Address address)
+    public User(string firstName, string lastName, int age, IAddress address)
     {
         Id = new Random().Next();
         FirstName = firstName;
@@ -24,5 +30,5 @@ public class User
             : throw new ArgumentException($"Provided age: {age} is less than zero");
     }
 
-    public Address GetAddress() => Address;
+    public string GetUserCityName() => Address.GetCity().GetCityName();
 }

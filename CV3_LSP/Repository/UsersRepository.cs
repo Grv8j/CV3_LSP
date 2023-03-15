@@ -4,14 +4,14 @@ namespace CV3_LSP.Repository;
 
 public interface IUserRepository
 {
-    public IList<User> GetUsers();
+    public IList<IUser> GetUsers();
 }
 
 public class UsersRepository : IUserRepository
 {
-    public IList<User> GetUsers()
+    public IList<IUser> GetUsers()
     {
-        return new List<User>
+        return new List<IUser>
         {
             new User("Tomas", "Jiny", 1, new Address("Jonasova", 100, new City("Ostrava", 70800))),
             new User("Johnas", "Tomas", 25, new Address("Nevimova", 145, new City("Trinec", 73961))),
