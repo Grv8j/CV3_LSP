@@ -6,13 +6,15 @@ public class User
     public int Age { get; set; }
     public string FirstName { get; }
     public string LastName { get; }
+    public Address Address { get; }
 
-    public User(string firstName, string lastName, int age)
+    public User(string firstName, string lastName, int age, Address address)
     {
         Id = new Random().Next();
         FirstName = firstName;
         LastName = lastName;
         Age = age;
+        Address = address;
     }
 
     public virtual void UpdateUsersAge(int age)

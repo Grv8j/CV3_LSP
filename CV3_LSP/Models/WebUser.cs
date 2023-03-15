@@ -4,8 +4,8 @@ public class WebUser : User
 {
     private string EmailAddress { get; }
 
-    public WebUser(string firstName, string lastName, int age, string emailAddress)
-        : base(firstName, lastName, age)
+    public WebUser(string firstName, string lastName, int age, Address address, string emailAddress)
+        : base(firstName, lastName, age, address)
     {
         EmailAddress = emailAddress;
     }
